@@ -1,7 +1,7 @@
 import java.text.Collator;
 import java.util.*;
 
-//We have got a string which consists from the words. They are separated with space. You must transform this string into a data structure, which groups
+//We have got a string which consists of the words. They are separated with space. You must transform this string into a data structure, which groups
 //words by the first letter in it.
 
 //Then you must print out only those groups which contain more than 1 element.

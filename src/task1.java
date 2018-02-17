@@ -1,19 +1,24 @@
 import java.text.Collator;
 import java.util.*;
 
-//Есть строка, состоящая из слов. Все слова в ней разделены одним пробелом. Нужно преобразовать строку в такую структуру данных, которая группирует слова по первой букве в слове.
-//
-//Затем вывести только группы, содержащие более одного элемента. Группы должны быть отсортированы в алфавитном порядке по всем буквам в слове.
-//Слова внутри группы нужно сортировать по убыванию (по количеству символов); если число символов равное, то сортировать в алфавитном порядке.
-//Пример строки: String s = "сапог сарай арбуз болт бокс биржа"
-//Отсортированная строка: [б=[биржа, бокс, болт], c=[caпог, сарай]]
+//We have got a string which consists from the words. They are separated with space. You must transform this string into a data structure, which groups
+//words by the first letter in it.
+
+//Then you must print out only those groups which contain more than 1 element.
+//Groups must be sorted alphabetically considering every single character.
+
+//Words inside each group must be sorted in decreasing order(by the length). If the lenght is equal, then sort alphabetically.
+//Characters also must be printed out alphabetically
+
+//For e.g. String s = "house home brake fly flower fox";
+//Result: [f=["flower", "fox", "fly"], h=["house", "home"]]
 
 public class task1 {
-    private static Locale ruLocale = new Locale.Builder().setLanguage("ru").build();
-    private static final Locale TEST_LOCALE = ruLocale;
+    private static Locale enLocale = new Locale.Builder().setLanguage("en").build();
+    private static final Locale TEST_LOCALE = enLocale;
 
     public static void main(String[] args) {
-        String s = "д дым дом сосна срам капитализм мозги мороженное калька стыд абажур гора мамка сос ос ареал аспид камера дом";
+        String s = "house aaaaa flat home hunger fox fix bug alice apple";
         TreeMap<Character, List<String>> data = new TreeMap<>();
 
         for (String str : Arrays.asList(s.split(" "))) {
